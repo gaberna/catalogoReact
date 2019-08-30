@@ -18,7 +18,8 @@
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -31,6 +32,7 @@
     "@storybook/react": "^5.1.11",
     "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0",
+    "babel-plugin-styled-components": "^1.10.6",
     "clean-webpack-plugin": "^1.0.0",
     "concurrently": "^4.0.0",
     "css-loader": "^2.0.0",

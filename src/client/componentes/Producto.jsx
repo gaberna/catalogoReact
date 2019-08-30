@@ -2,6 +2,7 @@
 /* eslint-disable linebreak-style */
 
 import React from "react";
+import Catalogo from "./Catalogo";
 
 let productList = [
   {
@@ -26,52 +27,6 @@ let productList = [
     precio: 27.5
   }
 ];
-
-const Prod = ({ grupo, descripcion, division, codigo, precio }) => {
-  return (
-    <section>
-      <h2>Grupo:{grupo}</h2>
-      <p>Descripción:{descripcion}</p>
-      <p>Division:{division}</p>
-      <p>codigo:{codigo}</p>
-      <p>Precio: AR$ {precio}</p>
-    </section>
-  );
-};
-
-class Catalogo extends React.Component {
-  state = { stock: false };
-
-  toggleStockNoStock = () => {
-    this.setState(prevEstate => ({
-      stock: !prevEstate.stock
-    }));
-  };
-
-  render() {
-    const { prods } = this.props;
-    return (
-      <div>
-        <h1>
-          Actualmente
-          {this.state.stock ? " HAY Stock" : " NO HAY stock"}
-        </h1>       
-        <button onClick={this.toggleStockNoStock}>Comprar</button>
-
-        {prods.map((prods, i) => (
-          <Prod
-            key={i}
-            codigo={prods.codigo}
-            descripcion={prods.descripcion}
-            grupo={prods.grupo}
-            division={prods.division}
-            precio={prods.precio}
-          />
-        ))}
-      </div>
-    );
-  }
-}
 
 class Producto extends React.Component {
   render() {
